@@ -1,0 +1,20 @@
+{
+  "name": "k.h.k.4.k.z.k.3.k.l",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "node src/index.js"
+  },
+  "keywords": [],
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "@discordjs/rest": "^1.0.1",
+    "discord.js": "^14.1.2"
+  }
+}
