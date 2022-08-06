@@ -1,4 +1,3 @@
-import Discord from "discord.js";
 import { Client } from "discord.js";
 import Events from "../classes/Events.js";
 class Main extends Client {
@@ -16,9 +15,13 @@ class Main extends Client {
 
     Events(this).then(() =>
       this.login(
-        "MTAwNDQ3MzEwOTEwNzE4MzYzNg.GzjkHQ.2P0hxFe66lEMMLavfCaz3uLaYDm5bq3tms8HhU"
+        "MTAwNDQ3MzEwOTEwNzE4MzYzNg.GaZrSY.rZCYpp6VJwp6wrwu2VMyyEemww3gdwZaep9IAA"
       )
     );
   }
 }
+/*This was made by VictorWorld#0880
+  -GitHub: YTvictorwold
+  -
+*/
 export default Main;
