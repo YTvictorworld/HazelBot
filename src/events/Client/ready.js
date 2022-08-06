@@ -1,4 +1,5 @@
 import Commands from "../../classes/Commands.js";
+import { ActivityType } from "discord.js";
 class Ready {
   constructor(client) {
     this.client = client;
@@ -11,14 +12,13 @@ class Ready {
       this.client.slashcmds.map((a) => a.data.toJSON())
     );
     function funcion() {
-      const estados = ["First", "Second"];
+      const estados = [".gg/arclight", "ArcLight"];
       const Estadosr = estados[Math.floor(estados.length * Math.random())];
 
-      client.user.setActivity(Estadosr, {
-        type: "PLAYING",
-      });
+      client.user.setActivity(Estadosr, { type: ActivityType.Playing });
     }
     setInterval(funcion, 5000);
+
     console.log(`Bot On!\nTag: ${this.client.user.tag}`);
     console.log("🟢  Bot Started 🟢");
   }

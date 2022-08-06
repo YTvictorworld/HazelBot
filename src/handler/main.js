@@ -16,7 +16,7 @@ class Main extends Client {
 
     Events(this).then(() =>
       this.login(
-        "MTAwNDQ3MzEwOTEwNzE4MzYzNg.Ge7KwS.dtEVprdYXba8sxh-3zIogttYh8v2o0R97mMRPQ"
+        "MTAwNDQ3MzEwOTEwNzE4MzYzNg.GzjkHQ.2P0hxFe66lEMMLavfCaz3uLaYDm5bq3tms8HhU"
       )
     );
   }
