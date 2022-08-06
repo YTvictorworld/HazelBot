@@ -21,13 +21,17 @@ class test extends Basecmd {
   async run(client, interaction) {
     const args = interaction.options.getString("script");
     const scripts = require("../../other/games.json");
-    const filter = scripts.filter((x) => x.name === args.toLowerCase());
+    const filter = scripts.filter(
+      (x) => x.name.toLowerCase() === args.toLowerCase()
+    );
     let dates = [];
     for (let i = 0; i < scripts.length; i++) {
       const element = scripts[i];
       dates.push(element.name);
     }
     if (filter.length === 0) {
+      console.log(scripts);
+      console.log(filter);
       let embed = new EmbedBuilder()
         .setTitle(`---- [ ❔ ] ----`)
         .setThumbnail(`${interaction.guild.iconURL()}`)
@@ -36,7 +40,7 @@ class test extends Basecmd {
           `
         I can't find the requested script these are the ones we have available:  
         ***-------------***
-        \`\`\`${dates.join(", ")}\`\`\`
+        \`\`\`${dates.join("\n")}\`\`\`
         ***-------------***
         `
         )
@@ -45,7 +49,7 @@ class test extends Basecmd {
           iconURL: `${interaction.guild.iconURL()}`,
         })
         .setTimestamp();
-      await interaction.reply({ embeds: [embed] });
+      await interaction.reply({ embeds: [embed], ephemeral: true });
     } else {
       const embed = new EmbedBuilder()
         .setTitle(`---- [ ${filter[0].name} ] ----`)
@@ -64,7 +68,7 @@ class test extends Basecmd {
           iconURL: `${interaction.guild.iconURL()}`,
         })
         .setTimestamp();
-      interaction.reply({ embeds: [embed] });
+      interaction.reply({ embeds: [embed], ephemeral: true });
     }
   }
 }
